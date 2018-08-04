@@ -9,21 +9,56 @@
     <title>Steev James</title>
 	
 	<link rel="stylesheet" href="css.css">
+	
 
 	</head>
 
 	<style>
-#footer{
-background-color:#444;position:absolute;left:0;right:0;bottom:0; padding:15px;color:#fff;
+*{
+box-sizing: border-box;
 }
-	</style>
+body
+{
+margin:0;
+}
+#footer{
+background-color:#444;height:60px; padding:15px;color:#fff;
+}
+#main{
+height:100vh;background-color:#500;color:#fff;padding:10px;transition:all 3s;
+}
+#subtitle{
+font-size:60%;
+}
+#title{
+transition:all 3s;font-size:8vw;text-align:center;padding:30px;padding-left:3vw;padding-right:3vw;
+position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%); min-height:30vh;
+}
+
+
+</style>
 <body>
 
+<div id="main">
+<div id="title">Steev James <br><span id="subtitle"> - Official Site</span></div>
+</div>
 
 <footer id="footer">
 Created by Steev James.
 </footer>
 
+
+<script>
+function animate()
+{
+
+document.getElementById('main').style.backgroundColor='#000';
+}
+setTimeout(animate, 1000);
+
+</script>
+
 </body>
+
 
 </html>
