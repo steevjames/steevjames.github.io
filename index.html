@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	  <link rel="icon" href="l.png" type="image/gif">
+	  <link rel="icon" href="img/l.png" type="image/gif">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -20,29 +20,29 @@ box-sizing: border-box;
 }
 body
 {
-margin:0;
+margin:0;padding:0;
 }
 #footer{
-background-color:#444;height:60px; padding:15px;color:#fff;clear:both;
+background-color:#444; padding:15px;color:#fff;clear:both;padding-left:5%;padding-right:5%;overflow:hidden;text-align:center;
 }
 #main{
-height:calc(100vh - 10px);background-color:rgba(0,0,0,1);color:#fff;padding:10px;transition:all 3s;
+height:calc(100vh - 0px);background-color:rgba(0,0,0,1);color:#fff;padding:10px;transition:all 3s;
 }
 #subtitle{
-font-size:60%;
+font-size:0px;transition:all 3s;
 }
 #title{
 transition:all 3s;font-size:0vw;text-align:center;padding:30px;padding-left:3vw;padding-right:3vw;
 position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%); min-height:30vh;
 }
 #parallax{
-background-image: url("l.png");height:100px;background-size:cover;background-attachment:fixed;background-color:#222;text-align:center;
+background-image: url("img/l.png");height:100px;background-size:cover;background-attachment:fixed;background-color:#222;text-align:center;
 }
 #about{
 padding:30px;padding-top:120px;padding-left:5%;padding-right:5%;background-color:#eee;color:black;font-size:20px;text-align:center;overflow:hidden;
 }
 #out{
-padding:5px;background-color:#222;background-image: linear-gradient(to right top, #051937, #201435, #310b2d, #3c021f, #41000c);
+padding:0px;background-color:#222;background-image: linear-gradient(to right top, #051937, #201435, #310b2d, #3c021f, #41000c);
 }
 #image{
 width:200px;height:200px;border-radius:200px;
@@ -83,15 +83,21 @@ flex-basis: 100%;
 a{
 text-decoration:none;
 }
+#footerright{
+float:left;padding:20px;width:50%;text-align:right;
+}
+#footerleft{
+float:left;padding:20px;width:50%;border-right:1px solid white;text-align:left;
+}
 </style>
 <body>
 <div id="out">
 <div id="main">
-<div id="title">Steev James <br><span id="subtitle"> - Official Site</span></div>
+<div id="title">Steev James <br><span id="subtitle"> - The Official Site</span></div>
 </div>
 </div>
 <div id="parallax">
-<img src="me.jpg" id="image">
+<img src="img/me.jpg" id="image">
 </div>
 <div id="about">
 <div id="brief"><i>Tech Enthusiast | Crazy Guy | Blogger</i></div>
@@ -122,10 +128,14 @@ text-decoration:none;
 <div class="linesplit"></div>
 <a href="https://www.youtube.com/channel/UCwonSo8pkphElsU85S800Zw"><div class="profile" ><img src="icons/youtube.png" style="width:100%;">Youtube</div></a>
 <a href="https://www.linkedin.com/in/steev-james-960273ba/"><div class="profile" ><img src="icons/linkedin.png" style="width:100%;">LinkedIn</div></a>
+<div class="profile" ></div>
 </div>
 </div>
 <footer id="footer">
-Created by Steev James.
+<div id="footerleft">Everything is Awesome !</div>
+<div id="footerright">Created by Steev James</div>
+<br>
+<div style="padding:20px;clear:both;font-size:18px;">CopyLeft 2018</div>
 </footer>
 
 
@@ -135,6 +145,7 @@ function animate()
 
 document.getElementById('main').style.backgroundColor='rgba(0,0,0,.4)';
 document.getElementById('title').style.fontSize='8vw';
+setTimeout(function(){document.getElementById('subtitle').style.fontSize='40%';},3000);
 }
 setTimeout(animate, 500);
 
