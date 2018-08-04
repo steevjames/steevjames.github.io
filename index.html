@@ -89,6 +89,11 @@ float:left;padding:20px;width:50%;text-align:right;
 #footerleft{
 float:left;padding:20px;width:50%;border-right:1px solid white;text-align:left;
 }
+@keyframes opacity{
+0% {background-color:rgba(0,0,0,.4);}
+50% {background-color:rgba(0,0,0,.1);}
+100% {background-color:rgba(0,0,0,.4);}
+}
 </style>
 <body>
 <div id="out">
@@ -145,7 +150,10 @@ function animate()
 
 document.getElementById('main').style.backgroundColor='rgba(0,0,0,.4)';
 document.getElementById('title').style.fontSize='8vw';
-setTimeout(function(){document.getElementById('subtitle').style.fontSize='40%';},3000);
+setTimeout(function(){
+	document.getElementById('subtitle').style.fontSize='40%';
+	document.getElementById('main').style.animation='opacity 6s infinite';
+	},3000);
 }
 setTimeout(animate, 500);
 
