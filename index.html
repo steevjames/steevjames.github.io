@@ -25,7 +25,7 @@ margin:0;
 background-color:#444;height:60px; padding:15px;color:#fff;
 }
 #main{
-height:100vh;background-color:#500;color:#fff;padding:10px;transition:all 3s;
+height:calc(100vh - 10px);background-color:rgba(0,0,0,1);color:#fff;padding:10px;transition:all 3s;
 }
 #subtitle{
 font-size:60%;
@@ -34,13 +34,30 @@ font-size:60%;
 transition:all 3s;font-size:8vw;text-align:center;padding:30px;padding-left:3vw;padding-right:3vw;
 position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%); min-height:30vh;
 }
-
-
+#parallax{
+background-image: url("l.png");height:100px;background-size:cover;background-attachment:fixed;background-color:#222;text-align:center;
+}
+#about{
+padding:30px;padding-top:120px;padding-left:5%;padding-right:5%;background-color:#eee;color:black;font-size:20px;text-align:center;
+}
+#out{
+padding:5px;background-color:#222;background-image: linear-gradient(to right top, #051937, #201435, #310b2d, #3c021f, #41000c);
+}
+#image{
+width:200px;height:200px;border-radius:200px;
+}
 </style>
 <body>
-
+<div id="out">
 <div id="main">
 <div id="title">Steev James <br><span id="subtitle"> - Official Site</span></div>
+</div>
+</div>
+<div id="parallax">
+<img src="me.jpg" id="image">
+</div>
+<div id="about">
+sample
 </div>
 
 <footer id="footer">
@@ -52,7 +69,7 @@ Created by Steev James.
 function animate()
 {
 
-document.getElementById('main').style.backgroundColor='#000';
+document.getElementById('main').style.backgroundColor='rgba(0,0,0,.5)';
 }
 setTimeout(animate, 1000);
 
