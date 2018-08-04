@@ -32,7 +32,7 @@ height:calc(100vh - 10px);background-color:rgba(0,0,0,1);color:#fff;padding:10px
 font-size:60%;
 }
 #title{
-transition:all 3s;font-size:8vw;text-align:center;padding:30px;padding-left:3vw;padding-right:3vw;
+transition:all 3s;font-size:0vw;text-align:center;padding:30px;padding-left:3vw;padding-right:3vw;
 position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%); min-height:30vh;
 }
 #parallax{
@@ -54,13 +54,28 @@ font-size:17px
 margin-top:20px;margin-bottom:20px;clear:both;
 }
 .cards{
-width:50%;float:left;color:black;padding-top:25px;padding-bottom:25px;font-size:18px;
+width:50%;float:left;color:black;padding-top:25px;padding-bottom:25px;font-size:18px;text-align:center;
 }
 
 @media only screen and (max-width: 1000px) {
     .cards {
         width:100%;
     }
+	.endofline{
+		display:none;
+	}
+}
+#social{
+margin-left:10%;margin-right:10%;
+}
+.profile{
+color:black;font-size:18px;width:200px;text-align:center;margin:15px;font-size:20px;
+}
+#profiles{
+display:flex;justify-content: center; flex-wrap:wrap;
+}
+.endofline{
+flex-basis: 100%;height:1px;background-color:black;margin-top:10px;margin-bottom:10px;
 }
 </style>
 <body>
@@ -82,7 +97,20 @@ width:50%;float:left;color:black;padding-top:25px;padding-bottom:25px;font-size:
 </div>
 
 </div>
-..
+<div id="social">
+<p style="text-align:center;font-size:30px;">Social Media Profiles</p>
+
+
+<div id="profiles">
+<div class="profile" ><img src="icons/fb.png" style="width:100%;">Facebook</div>
+<div class="profile" ><img src="icons/gplay.png" style="width:100%;">Play Store</div>
+<div class="profile" ><img src="icons/github.png" style="width:100%;">Github</div>
+<div class="endofline"></div>
+<div class="profile" ><img src="icons/twitter.png" style="width:100%;">Twitter</div>
+<div class="profile" ><img src="icons/gplus.png" style="width:100%;">Google+</div>
+<div class="profile" ><img src="icons/insta.png" style="width:100%;">Instagram</div>
+</div>
+</div>
 <footer id="footer">
 Created by Steev James.
 </footer>
@@ -93,12 +121,10 @@ function animate()
 {
 
 document.getElementById('main').style.backgroundColor='rgba(0,0,0,.4)';
+document.getElementById('title').style.fontSize='8vw';
 }
-setTimeout(animate, 1000);
-if(window.innerWidth<700)
-{
+setTimeout(animate, 500);
 
-}
 </script>
 
 </body>
