@@ -1,2 +1,2 @@
 # steevjames.github.io
-My Website which is still under development.
+This website is under development. The website is avilable at https://steevjames.github.io/ . 
