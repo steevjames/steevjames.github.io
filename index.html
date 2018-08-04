@@ -23,7 +23,7 @@ body
 margin:0;
 }
 #footer{
-background-color:#444;height:60px; padding:15px;color:#fff;
+background-color:#444;height:60px; padding:15px;color:#fff;clear:both;
 }
 #main{
 height:calc(100vh - 10px);background-color:rgba(0,0,0,1);color:#fff;padding:10px;transition:all 3s;
@@ -39,7 +39,7 @@ position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50
 background-image: url("l.png");height:100px;background-size:cover;background-attachment:fixed;background-color:#222;text-align:center;
 }
 #about{
-padding:30px;padding-top:120px;padding-left:5%;padding-right:5%;background-color:#eee;color:black;font-size:20px;text-align:center;
+padding:30px;padding-top:120px;padding-left:5%;padding-right:5%;background-color:#eee;color:black;font-size:20px;text-align:center;overflow:hidden;
 }
 #out{
 padding:5px;background-color:#222;background-image: linear-gradient(to right top, #051937, #201435, #310b2d, #3c021f, #41000c);
@@ -49,6 +49,18 @@ width:200px;height:200px;border-radius:200px;
 }
 #brief{
 font-size:17px
+}
+#cardcontainer{
+margin-top:20px;margin-bottom:20px;clear:both;
+}
+.cards{
+width:50%;float:left;color:black;padding-top:25px;padding-bottom:25px;font-size:18px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .cards {
+        width:100%;
+    }
 }
 </style>
 <body>
@@ -62,8 +74,15 @@ font-size:17px
 </div>
 <div id="about">
 <div id="brief"><i>Tech Enthusiast | Crazy Guy | Blogger</i></div>
+
+<div id="cardcontainer">
+<div class="cards" style="background-color:#bbb;"> Studying at Govt. Model Engineering College</div>
+<div class="cards" style="background-color:#ccc;"> Studied at Carmel HSS Chalakudy</div>
+<div class="cards" style="background-color:#ddd;float:none;margin-left:auto;margin-right:auto;clear:both;"> Studied at CMI Public School</div>
 </div>
 
+</div>
+..
 <footer id="footer">
 Created by Steev James.
 </footer>
@@ -76,7 +95,10 @@ function animate()
 document.getElementById('main').style.backgroundColor='rgba(0,0,0,.4)';
 }
 setTimeout(animate, 1000);
+if(window.innerWidth<700)
+{
 
+}
 </script>
 
 </body>
