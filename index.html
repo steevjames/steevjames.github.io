@@ -47,6 +47,9 @@ padding:5px;background-color:#222;background-image: linear-gradient(to right top
 #image{
 width:200px;height:200px;border-radius:200px;
 }
+#brief{
+font-size:17px
+}
 </style>
 <body>
 <div id="out">
@@ -58,7 +61,7 @@ width:200px;height:200px;border-radius:200px;
 <img src="me.jpg" id="image">
 </div>
 <div id="about">
-sample
+<div id="brief"><i>Tech Enthusiast | Crazy Guy | Blogger</i></div>
 </div>
 
 <footer id="footer">
@@ -70,7 +73,7 @@ Created by Steev James.
 function animate()
 {
 
-document.getElementById('main').style.backgroundColor='rgba(0,0,0,.5)';
+document.getElementById('main').style.backgroundColor='rgba(0,0,0,.4)';
 }
 setTimeout(animate, 1000);
 
