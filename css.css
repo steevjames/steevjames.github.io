@@ -1,0 +1,79 @@
+*{
+box-sizing: border-box;
+}
+body
+{
+margin:0;padding:0;
+}
+#footer{
+background-color:#444; padding:15px;color:#fff;clear:both;padding-left:5%;padding-right:5%;overflow:hidden;text-align:center;
+}
+#main{
+height:calc(100vh - 0px);background-color:rgba(0,0,0,1);color:#fff;padding:10px;transition:all 3s;
+}
+#subtitle{
+font-size:0px;transition:all 3s;white-space: nowrap;
+}
+#title{
+transition:all 3s;font-size:0vw;text-align:center;padding:30px;
+position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);
+}
+#parallax{
+background-image: url("img/cover.jpg");height:100px;background-size:cover;background-attachment:fixed;background-color:#222;text-align:center;
+}
+#about{
+padding:30px;padding-top:120px;padding-left:5%;padding-right:5%;background-color:#eee;color:black;font-size:20px;text-align:center;overflow:hidden;
+}
+#out{
+padding:0px;background-color:#222;background-image: linear-gradient(to right top, #051937, #201435, #310b2d, #3c021f, #41000c);
+}
+#image{
+width:200px;height:200px;border-radius:200px;
+}
+#brief{
+font-size:17px
+}
+#cardcontainer{
+margin-top:20px;margin-bottom:20px;clear:both;
+}
+.cards{
+width:50%;float:left;color:black;padding-top:25px;padding-bottom:25px;font-size:18px;text-align:center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .cards {
+        width:100%;
+    }
+	.endofline{
+		display:none;
+	}
+}
+#social{
+margin-left:10%;margin-right:10%;
+}
+.profile{
+color:black;font-size:18px;width:200px;text-align:center;margin:15px;font-size:20px;
+}
+#profiles{
+display:flex;justify-content: center; flex-wrap:wrap;
+}
+.endofline{
+flex-basis: 50%;height:1px;background-color:black;margin-top:10px;margin-bottom:10px;
+}
+.linesplit{
+flex-basis: 100%;
+}
+a{
+text-decoration:none;
+}
+#footerright{
+float:left;padding:20px;width:50%;text-align:right;
+}
+#footerleft{
+float:left;padding:20px;width:50%;border-right:1px solid white;text-align:left;
+}
+@keyframes opacity{
+0% {background-color:rgba(0,0,0,.5);}
+50% {background-color:rgba(0,0,0,.1);}
+100% {background-color:rgba(0,0,0,.5);}
+}
