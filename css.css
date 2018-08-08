@@ -167,3 +167,11 @@ a {
 		background-color: rgba(0, 0, 0, .5);
 	}
 }
+#collect-chat-launcher-container {
+	right:15px !important;
+	bottom:15px !important;
+	zoom:.8;
+}
+#collect-chat-launcher-container > * {
+	background-color:rgba(0,0,0,.6) !important;
+}
