@@ -1,0 +1,146 @@
+body{
+    margin:0;
+    padding:0;
+}
+*{
+    box-sizing:border-box;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+#box1{
+    background-color:#fff;
+    background-image: url('bg2.jpg');
+    background-size: cover;
+    background-position:center;
+}
+#logo{
+    /* height: calc( 100vh - 80px ); */
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+}
+#navbar{
+    /* background-image: url('bg2.jpg'); */
+    background-position:center;
+    background-size: cover;
+    left:0px;
+    right:0px;
+    top:0px;
+    position:sticky;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#222;
+    font-size: 20px;
+    padding:20px 30px;
+    background-color: rgba(255,255,255,1);
+    border-top:2px solid red;
+    border-bottom:1px solid #fff;
+    overflow: hidden;
+    box-shadow: 0px -1px 20px -1px rgba(0,0,0,0.75);
+}
+.navleft{
+    float:left;
+}
+.navright{
+    float:right;
+}
+.navmenu{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,.7);
+    color:white;
+    text-align: center;
+}
+.navlink{
+    display: inline;
+    padding:0 15px;
+}
+.navmenu > #navcontainer > a >.navlink{
+display: block;
+color:white;
+padding:20px;
+font-size:30px;
+}
+
+
+#navbtn{
+    display:none;
+    float:right;
+}
+#oldnav{
+    display:none;
+    position: fixed;
+    right:20px;
+    top:20px;
+    font-size:200%;
+    color:red;
+    cursor : pointer;
+}
+.center{
+    position: relative;
+    top:50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.red{
+    color:red;
+}
+.grey{
+    color:#222;
+}
+.desc{
+    margin:60px 5vw 60px 5vw;
+    font-size: 20px;
+    font-family: verdana, 'Times New Roman', Times, serif;
+    color:#333;
+    text-align: center;
+    padding:100px 0px;
+}
+#x{
+    display: inline-block;
+    animation: xrotate 2s infinite;
+}
+.parrallax{
+    background-image: url('ted.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding:130px 0 130px 0;
+    color:white;
+    font-family: monospace;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px #f00;
+}
+.bottombar{
+    font-size:140%;
+}
+@keyframes xrotate{
+0% {transform: rotateY(0deg);}
+100% {transform: rotateY(360deg);}
+}
+@media only screen and (max-width: 600px) {
+	#logo{
+		font-size:50px;
+    }
+    .navright{
+        float:right;
+        display: none;
+    }
+    #navbtn{
+        display:inline;
+    }
+    .parrallax{
+        font-size: 25px;
+    }
+    .desc > *{
+        font-size: 20px;
+    }
+    #logo{
+        height:100vh;
+    }
+}
