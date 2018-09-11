@@ -32,7 +32,7 @@ body {
 	padding: 10px;
 	/* transition: all 3s; */
 	/* background-image:url('bg2.jpg'); */
-	background-image: linear-gradient(to left bottom, #ffffff, #f3f3f3, #e8e8e8, #dcdcdc, #d1d1d1);
+	background-image: linear-gradient(to left bottom, #ffffff, #f3f3f3, #e7e7e7, #dbdbdb, #cfcfcf);
 	background-size: cover;
 	background-position: center;
 	user-select: none;
