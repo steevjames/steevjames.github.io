@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	font-family:font;
 }
-
+ 
 
   @font-face {
     font-family: font;
@@ -144,10 +144,11 @@ body {
 .profile {
 	color: black;
 	font-size: 18px;
-	width: 200px;
+	width: 150px;
 	text-align: center;
-	margin: 15px;
+	margin: 50px;
 	font-size: 20px;
+	overflow: hidden;
 }
 
 #profiles {
@@ -156,17 +157,18 @@ body {
 	flex-wrap: wrap;
 }
 
-.endofline {
-	flex-basis: 50%;
-	height: 1px;
-	background-color: black;
-	margin-top: 10px;
-	margin-bottom: 10px;
+@media only screen and (max-width: 600px) {
+.profile{
+	width:100px;
+	margin:10px;
+}
+#profiles {
+	margin-left: 0;
+	margin-right: 0;
+	}
 }
 
-.linesplit {
-	flex-basis: 100%;
-}
+
 
 a {
 	text-decoration: none;
