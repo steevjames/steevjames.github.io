@@ -40,14 +40,14 @@ body {
 }
 
 #subtitle {
-	font-size: 0.1px;
-	transition: all 3s;
+	font-size: 0px;
+	transition: font-size 3s;
 	white-space: nowrap;
 }
 
 #title {
-	transition: all 3s;
-	font-size: 1px;
+	transition: font-size 3s;
+	font-size: 0px;
 	text-align: center;
 	padding: 30px;
 	position: absolute;
