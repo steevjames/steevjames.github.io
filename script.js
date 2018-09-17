@@ -35,3 +35,14 @@ function shownav() {
  document.getElementById("navbtn").addEventListener("click", shownav);
  document.getElementById("oldnav").addEventListener("click", hidenav);
 
+
+
+ function scrolltonav()
+ {
+    //  alert(window.scrollY);
+    document.getElementById('navbar').scrollIntoView({block: 'start', behavior: 'smooth'});
+ }
+
+//  setTimeout(function(){
+//     document.getElementById('footer').scrollIntoView({block: 'start', behavior: 'smooth'});
+//     },500);
