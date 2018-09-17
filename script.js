@@ -12,7 +12,7 @@ setTimeout(animate, 100);
 
 
 
-
+document.getElementById('subtitle').style.fontSize='0px';
 
 
 
