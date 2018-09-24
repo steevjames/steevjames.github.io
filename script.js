@@ -1,20 +1,3 @@
-function animate()
-{
-
-	// document.getElementById('main').style.backgroundColor='rgba(0,0,0,.5)';
-	if(window.innerWidth>600)	document.getElementById('title').style.fontSize='6vw';
-	else document.getElementById('title').style.fontSize='8vw';
-	setTimeout(function(){
-		document.getElementById('subtitle').style.fontSize='40%';
-		},3000);
-}
-setTimeout(animate, 100);
-
-
-
-document.getElementById('subtitle').style.fontSize='0px';
-
-
 
 if(window.innerWidth>600)
 document.getElementById('out').style.height = 'calc( 100vh - '+document.getElementById('navbar').clientHeight+'px )';

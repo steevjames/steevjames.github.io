@@ -39,15 +39,19 @@ body {
 	user-select: none;
 }
 
+/* Change All Values when changing Animation times */
+
 #subtitle {
-	font-size: 0px;
+	font-size: 40%;
 	transition: font-size 3s;
 	white-space: nowrap;
+	animation: subtitleanim 10s;
 }
 
 #title {
 	transition: font-size 3s;
-	font-size: 0px;
+	font-size: 6vw;
+	animation: titleanim 6s;
 	text-align: center;
 	padding: 30px;
 	position: absolute;
@@ -55,6 +59,29 @@ body {
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 }
+@keyframes titleanim{
+	0% {font-size:0px;}
+	15% {font-size:0px;}
+	100% {font-size:6vw;}
+}
+
+@keyframes subtitleanim{
+	0% {font-size:0%;}
+	50% {font-size:0%;}
+	100% {font-size:40%;}
+}
+
+@media only screen and (max-width: 600px) {	
+	#title {
+		font-size: 8vw;
+	}
+	@keyframes titleanim{
+		0% {font-size:0px;}
+		15% {font-size:0px;}
+		100% {font-size:8vw;}
+	}
+}
+
 
 #parallax {
 	background-image: url("img/cover.jpg");
