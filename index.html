@@ -128,7 +128,7 @@
 	</div>
 
 	<div id="social">
-		<p class="heading">Social Media Profiles</p>
+		<p class="heading"><a onclick="openFullscreen()">Social Media Profiles</a></p>
 
 
 		<div id="profiles">
@@ -206,5 +206,18 @@
 
 </body>
 
-
+<script>
+		var elem = document.body;
+		function openFullscreen() {
+		  if (elem.requestFullscreen) {
+			elem.requestFullscreen();
+		  } else if (elem.mozRequestFullScreen) { /* Firefox */
+			elem.mozRequestFullScreen();
+		  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+			elem.webkitRequestFullscreen();
+		  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+			elem.msRequestFullscreen();
+		  }
+		}
+		</script>
 </html>
