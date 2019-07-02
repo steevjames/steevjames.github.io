@@ -224,17 +224,7 @@ a {
 	text-align: left;
 }
 
-@keyframes opacity {
-	0% {
-		background-color: rgba(0, 0, 0, .5);
-	}
-	50% {
-		background-color: rgba(0, 0, 0, .1);
-	}
-	100% {
-		background-color: rgba(0, 0, 0, .5);
-	}
-}
+
 #collect-chat-launcher-container {
 	right:15px !important;
 	bottom:15px !important;

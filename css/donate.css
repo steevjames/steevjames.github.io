@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+	font-family: font;
+}
+
+@font-face {
+	font-family: font;
+	src: url(../font.otf);
+}
+
+body {
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: font;
+}
+
+#footer {
+    background-color: #444;
+	padding: 15px;
+	color: #fff;
+	clear: both;
+	padding-left: 5%;
+	padding-right: 5%;
+	overflow: hidden;
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+.rotate {
+	display: inline-block;
+	animation: xrotate 2s infinite;
+}
+
+@keyframes xrotate {
+	0% {
+		transform: rotateY(0);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+#footerright {
+	float: left;
+	padding: 10px;
+	width: 50%;
+	text-align: right;
+}
+
+#footerleft {
+	float: left;
+	padding: 10px;
+	width: 50%;
+	border-right: 1px solid #fff;
+	text-align: left
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#navbar {
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: #222;
+    font-size: 25px;
+    text-align: left;
+	padding: 20px 30px;
+	background-color: rgba(255, 255, 255, 1);
+	border-top: 2px solid red;
+	border-bottom: 1px solid #fff;
+	overflow: hidden;
+	box-shadow: 0 -1px 20px -1px rgba(0, 0, 0, .75);
+}
+
+.main {
+	background-color: #333;
+	color: #fff;
+	overflow: hidden;
+	padding: 100px;
+	padding-left: 3vw;
+	padding-right: 3vw;
+}
+.intro{
+    padding:30px 200px;
+    font-size:17px;
+}
+.coin{
+    width:100px;
+    margin: 20px;
+    margin-top: 10px;
+}
+.heading {
+	text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.pcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:20px;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+}
+.pmode{
+	background-color:white;
+	color:#333;
+	margin: 20px;
+	flex-basis: 32%;
+	text-align: center;
+	font-size: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 15px;
+    border-radius:10px;
+    font-size:15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pimage{
+    width:50%;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #navbar {
+        text-align:center; 
+    }
+    .intro{
+        padding:30px 80px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar {
+        text-align:center; 
+    }
+    .intro{
+        padding:30px 20px;
+    }
+    .pcontainer{
+		padding-left: 1vw;
+		padding-right: 1vw;
+	}
+	.pmode{
+		flex-basis: 80%;
+	}
+}
