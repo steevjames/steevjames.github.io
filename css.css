@@ -46,7 +46,7 @@ body:fullscreen {
 /* Change All Values when changing Animation times */
 
 #subtitle {
-	font-size: 40%;
+	font-size: 30%;
 	transition: font-size 3s;
 	white-space: nowrap;
 	animation: subtitleanim 10s;
@@ -54,7 +54,7 @@ body:fullscreen {
 
 #title {
 	transition: font-size 3s;
-	font-size: 6vw;
+	font-size: 4vw;
 	animation: titleanim 6s;
 	text-align: center;
 	padding: 30px;
@@ -72,7 +72,7 @@ body:fullscreen {
 		font-size: 0px;
 	}
 	100% {
-		font-size: 6vw;
+		font-size: 4vw;
 	}
 }
 
@@ -84,7 +84,7 @@ body:fullscreen {
 		font-size: 0%;
 	}
 	100% {
-		font-size: 40%;
+		font-size: 30%;
 	}
 }
 
@@ -271,7 +271,7 @@ a {
 	position: sticky;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	color: #222;
-	font-size: 20px;
+	font-size: 17px;
 	padding: 20px 30px;
 	background-color: rgba(255, 255, 255, 1);
 	border-top: 2px solid red;
