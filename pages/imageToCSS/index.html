@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="icon" href="img/l.png" type="image/gif">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steev James The Official Site</title>
+  <link rel="stylesheet" href="../../css.css">
+
+  <meta name="description"
+    content="This is the official website of Steev James. This site has few links and content that Steev created for fun.">
+  <meta name="keywords" content="Steev James, Steev James The Official Site, Steev">
+  <meta name="author" content="Steev James" />
+  <style>
+    .px {
+      height: 1px;
+      width: 1px;
+    }
+
+    #pic {
+      /* border: 1px solid #aaa; */
+      min-height: 150px;
+      width: 200px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background-color: #e7e7e7;
+    }
+
+    #pic>div {
+      height: 1px;
+      width: 1px;
+    }
+
+    .main {
+      padding: 20px;
+      text-align: center;
+      color: #777;
+      margin-top: 30px;
+    }
+
+    .buttons {
+      clear: both;
+      text-align: center;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .custom-button {
+      color: white;
+      padding: 10px 50px;
+      border:0px;
+      margin-top: 10px;
+      margin:5px;
+      border-radius: 15px;
+      background-color: #444;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="navbar">
+    <div class="navleft">Convert Image to CSS</div>
+    <div class="navright" id="navtoggle">
+      <div id="navcontainer">
+        <a href="https://github.com/steevjames/steevjames.github.io" target="_blank">
+          <div class="navlink">
+            <!-- Empty Nav Option - Replace it -->
+          </div>
+        </a>
+        <a href="../../">
+          <div class="navlink">Home </div>
+        </a>
+        </a>
+        <a href="https://steevjames.github.io/donate.html" target="_blank">
+          <div class="navlink">Donate </div>
+        </a>
+        <a href="https://github.com/steevjames" target="_blank">
+          <div class="navlink">Github </div>
+        </a>
+        <a href="https://www.facebook.com/steeventertainment/" target="_blank">
+          <div class="navlink">FB Page </div>
+        </a>
+      </div>
+      <div id="oldnav">X</div>
+    </div>
+    <div id="navbtn"><img src="../../nav.png" style="width:20px;"></div>
+  </div>
+
+  <canvas id="myCanvas" style="border:1px solid #d3d3d3;display:none;">
+    Your browser does not support this functionality.</canvas>
+
+
+  <div class="main">
+    <span id="headerText">
+      This was a fun though that came to my mind. An image can be uploaded and converted to CSS. The resultant image can
+      also be downloaded to an HTML file.<br />
+    </span>
+
+    <div id="pic" style="display:flex;flex-wrap: wrap;"> </div>
+
+  </div>
+  <br />
+  <div class="buttons">
+    <button style="display:none" class="custom-button" id="downloadButton" onclick="downloadpic();">Download as HTML</button>
+
+    <label class="custom-button">
+      <input type="file" onchange='loadImg(event)' />
+      Upload Image
+    </label>
+  </div>
+
+
+
+  <script>
+    var loadImg = function (event) {
+      var c = document.getElementById('myCanvas');
+      var context = c.getContext('2d');
+      var input = event.target;
+      var reader = new FileReader();
+      reader.onload = function () {
+        var dataURL = reader.result;
+        var imageObj = new Image();
+        imageObj.src = dataURL;
+        imageObj.onload = function () {
+
+          c.width = imageObj.width;
+          c.height = imageObj.height;
+          context.drawImage(imageObj, 0, 0);
+          var imgData = context.getImageData(0, 0, c.width, c.height);
+
+          var picture = document.getElementById("pic");
+          picture.style.width = imageObj.width + "px";
+          picture.innerHTML = "";
+          var i;
+          for (i = 0; i < imgData.data.length; i += 4) {
+            var pix = document.createElement("div");
+            pix.style.backgroundColor = "rgb(" + imgData.data[i] + "," + imgData.data[i + 1] + "," + imgData.data[i + 2] + ")";
+
+            picture.appendChild(pix);
+          }
+        }
+      }
+      reader.readAsDataURL(input.files[0]);
+      document.getElementById("downloadButton").style.display = "inline-block"
+    }
+
+    function downloadpic() {
+      let a = document.createElement('a');
+      a.href = "data:application/octet-stream," + encodeURIComponent("<html><body><style>#pic>div {height: 1px;width: 1px;}</style>" + document.getElementById("pic").outerHTML + "</body></html>");
+      a.download = 'image.html';
+      a.click();
+    }
+  </script>
+
+</body>
+
+</html>
