@@ -376,9 +376,11 @@ a {
 }
 
 .wrkicon {
-	width: 50%;
-	margin-left: 25%;
-	margin-right: 25%;
+	width: 30%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 30%;
+	margin-right: 30%;
 }
 
 @media only screen and (max-width: 600px) {

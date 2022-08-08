@@ -14,11 +14,6 @@
   <meta name="keywords" content="Steev James, Steev James The Official Site, Steev">
   <meta name="author" content="Steev James" />
   <style>
-    .px {
-      height: 1px;
-      width: 1px;
-    }
-
     #pic {
       /* border: 1px solid #aaa; */
       min-height: 150px;
@@ -31,8 +26,8 @@
     }
 
     #pic>div {
-      height: 1px;
-      width: 1px;
+      height: 3px;
+      width: 3px;
     }
 
     .main {
@@ -89,7 +84,7 @@
       </div>
       <div id="oldnav">X</div>
     </div>
-    <div id="navbtn"><img src="../../nav.png" style="width:20px;"></div>
+    <div id="navbtn"><img src="../../img/nav.png" style="width:20px;"></div>
   </div>
 
   <canvas id="myCanvas" style="border:1px solid #d3d3d3;display:none;">
@@ -120,6 +115,7 @@
 
   <script>
     var loadImg = function (event) {
+      var pixScale = 3;
       var c = document.getElementById('myCanvas');
       var context = c.getContext('2d');
       var input = event.target;
@@ -129,14 +125,15 @@
         var imageObj = new Image();
         imageObj.src = dataURL;
         imageObj.onload = function () {
-
-          c.width = imageObj.width;
-          c.height = imageObj.height;
-          context.drawImage(imageObj, 0, 0);
+          imageScale = 200 / Math.max(imageObj.width, imageObj.height);
+          console.log(imageScale);
+          c.width = Math.round(imageObj.width* imageScale);
+          c.height = Math.round(imageObj.height*imageScale);
+          context.drawImage(imageObj, 0, 0, c.width, c.height);
           var imgData = context.getImageData(0, 0, c.width, c.height);
 
           var picture = document.getElementById("pic");
-          picture.style.width = imageObj.width + "px";
+          picture.style.width = c.width * pixScale + "px";
           picture.innerHTML = "";
           var i;
           for (i = 0; i < imgData.data.length; i += 4) {
