@@ -1,0 +1,175 @@
+[
+  {
+    "title": "Slash Wars",
+    "description": "Epic action strategy war game! Conquer territories, clash with empires for victory.",
+    "category": "utility",
+    "icon": "<img src=\"featuredicons/slashwars.png\" class=\"project-icon\" alt=\"Slash Wars logo\">",
+    "links": [
+      {
+        "url": "https://slashwars.netlify.app/",
+        "title": "Play Slash Wars",
+        "icon": "external"
+      }
+    ],
+    "tags": ["HTML5 Game", "JavaScript", "Netlify"]
+  },
+  {
+    "title": "Zummary",
+    "description": "A native macOS productivity app that captures work context silently throughout the day and generates structured, AI-powered summaries and reports.",
+    "category": "ai-macos",
+    "icon": "<img src=\"featuredicons/zummary.png\" class=\"project-icon\" alt=\"Zummary logo\">",
+    "links": [
+      {
+        "url": "https://github.com/steevjames/Zummary---Download",
+        "title": "Download Zummary",
+        "icon": "external"
+      }
+    ],
+    "tags": ["macOS App", "Distribution", "Releases"]
+  },
+  {
+    "title": "Sales Briefing UI Agent",
+    "description": "An AI-powered user experience embedded directly into the Oracle Redwood Sales application. It understands the record context in the UI to dynamically generate tailored insights and action plans.",
+    "category": "web-mobile",
+    "icon": "<svg class=\"project-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><defs><linearGradient id=\"salesAiGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"var(--accent-indigo)\" /><stop offset=\"100%\" stop-color=\"var(--accent-cyan)\" /></linearGradient></defs><path d=\"M3 21h18\" stroke=\"url(#salesAiGrad)\" /><path d=\"M3 16l5-5 4 4 9-9\" stroke=\"url(#salesAiGrad)\" /><path d=\"M18 3l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5.5-1.5z\" fill=\"url(#salesAiGrad)\" /><path d=\"M12 6l.3.9.9.3-.9.3-.3.9-.3-.9-.9-.3.9-.3.3-.9z\" fill=\"url(#salesAiGrad)\" /></svg>",
+    "links": [
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7425960763430838272",
+        "title": "View Post",
+        "icon": "external"
+      }
+    ],
+    "tags": ["Agentic UI", "LLMs", "Redwood Sales"]
+  },
+  {
+    "title": "VibeFusion",
+    "description": "AI-powered Chrome extension designed for in-place web page content editing and context-aware transformations on live websites.",
+    "category": "ai-macos",
+    "icon": "<svg class=\"project-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"color: var(--accent-cyan)\"><path d=\"M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41\"></path><circle cx=\"12\" cy=\"12\" r=\"4\"></circle></svg>",
+    "links": [
+      {
+        "url": "https://github.com/steevjames/VibeFusion",
+        "title": "View Source",
+        "icon": "github"
+      }
+    ],
+    "tags": ["JavaScript", "Chrome APIs", "Generative AI"]
+  },
+  {
+    "title": "Stories for Flutter",
+    "description": "A highly customizable Flutter plugin enabling developers to build Instagram, WhatsApp, and Snapchat style stories in mobile apps easily.",
+    "category": "web-mobile",
+    "icon": "<img src=\"featuredicons/flutter.webp\" class=\"project-icon\" alt=\"Flutter logo\">",
+    "links": [
+      {
+        "url": "https://pub.dev/packages/stories_for_flutter",
+        "title": "Pub.dev Package",
+        "icon": "external"
+      },
+      {
+        "url": "https://github.com/steevjames",
+        "title": "GitHub",
+        "icon": "github"
+      }
+    ],
+    "tags": ["Flutter Package", "Dart", "UI Widget"]
+  },
+  {
+    "title": "Smart Bus Pass and Tracking",
+    "description": "A mobile application and web dashboard to track real-time bus locations, purchase digital passes, verify passenger tickets via QR codes, and view travel history.",
+    "category": "web-mobile",
+    "icon": "<img src=\"featuredicons/buspass.png\" class=\"project-icon\" alt=\"Smart Bus Pass logo\">",
+    "links": [
+      {
+        "url": "https://github.com/steevjames/Smart-Bus-System-App",
+        "title": "View Project",
+        "icon": "github"
+      }
+    ],
+    "tags": ["Flutter", "Node.js", "Firebase", "Realtime Maps"]
+  },
+  {
+    "title": "The Typing Game",
+    "description": "An Android game testing and boosting typing speed. Features different difficulty levels, layouts, and real-time speed metrics.",
+    "category": "utility",
+    "icon": "<img src=\"featuredicons/ty.png\" class=\"project-icon\" alt=\"Typing game logo\">",
+    "links": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.steevjames",
+        "title": "Play Store",
+        "icon": "external"
+      }
+    ],
+    "tags": ["Android", "Java", "Mobile Gaming"]
+  },
+  {
+    "title": "Vedge Expense Tracker",
+    "description": "A complete React-based web application to log daily spending, filter logs by category, and visualize expenses over time.",
+    "category": "web-mobile",
+    "icon": "<img src=\"featuredicons/xpensetracker.png\" class=\"project-icon\" alt=\"Expense tracker logo\">",
+    "links": [
+      {
+        "url": "https://xpensemonitor.netlify.app/",
+        "title": "Live Site",
+        "icon": "external"
+      }
+    ],
+    "tags": ["React", "CSS Grid", "Firebase"]
+  },
+  {
+    "title": "Image to CSS",
+    "description": "An experimental tool to convert images into a rendering grid constructed entirely using a single HTML element and CSS box-shadows.",
+    "category": "utility",
+    "icon": "<img src=\"featuredicons/imgtocss.png\" class=\"project-icon\" alt=\"Image to CSS logo\">",
+    "links": [
+      {
+        "url": "pages/imageToCSS/",
+        "title": "Launch App",
+        "icon": "external"
+      }
+    ],
+    "tags": ["HTML5", "CSS3", "Vanilla JS"]
+  },
+  {
+    "title": "MEC Attendance",
+    "description": "A student utility app designed for the Govt. Model Engineering College student body to track daily attendance, schedules, and class cuts.",
+    "category": "utility",
+    "icon": "<img src=\"featuredicons/mecatt.png\" class=\"project-icon\" alt=\"MEC Attendance logo\">",
+    "links": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.mec.attendance",
+        "title": "Play Store",
+        "icon": "external"
+      }
+    ],
+    "tags": ["Flutter", "Dart", "Timetable Engine"]
+  },
+  {
+    "title": "MEC-Drive",
+    "description": "A carpooling application developed to promote shared travel and reduce commuting costs for students and staff at MEC Kochi.",
+    "category": "web-mobile",
+    "icon": "<svg class=\"project-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"color: var(--accent-indigo)\"><path d=\"M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2\"></path><circle cx=\"7\" cy=\"17\" r=\"2\"></circle><circle cx=\"17\" cy=\"17\" r=\"2\"></circle></svg>",
+    "links": [
+      {
+        "url": "https://github.com/steevjames/MEC-Drive",
+        "title": "View Source",
+        "icon": "github"
+      }
+    ],
+    "tags": ["Flutter", "Dart", "Firebase"]
+  },
+  {
+    "title": "NoteClip",
+    "description": "A Django-powered online note clipboard system that lets developers store text clips, codes, and memos securely and access them anywhere.",
+    "category": "utility",
+    "icon": "<img src=\"featuredicons/not.png\" class=\"project-icon\" alt=\"NoteClip logo\">",
+    "links": [
+      {
+        "url": "http://noteclip.herokuapp.com/",
+        "title": "NoteClip Web",
+        "icon": "external"
+      }
+    ],
+    "tags": ["Django", "Python", "PostgreSQL"]
+  }
+]

@@ -1,278 +1,302 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="icon" href="img/l.png" type="image/gif">
+	<!-- Theme Initialization (Prevent flash of unstyled theme) -->
+	<script>
+		(function() {
+			const savedTheme = localStorage.getItem('theme') || 'light';
+			document.documentElement.setAttribute('data-theme', savedTheme);
+		})();
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Steev James The Official Site</title>
+	<title>Steev James - The Official Site</title>
+	
+	<!-- Favicon -->
+	<link rel="icon" href="img/l.png" type="image/gif">
+	
+	<!-- Stylesheet -->
 	<link rel="stylesheet" href="css.css">
 
-	<meta name="description"
-		content="This is the official website of Steev James. This site has few links and content that Steev created for fun.">
-	<meta name="keywords" content="Steev James, Steev James The Official Site, Steev">
-	<meta name="author" content="Steev James" />
+	<!-- Marked Markdown Parser (Client-Side) -->
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Official portfolio of Steev James, a Project Lead at Oracle & Backend/AI Engineer. Showcasing projects like Zummary, VibeFusion, Stories for Flutter, and custom articles.">
+	<meta name="keywords" content="Steev James, Oracle Project Lead, Backend Engineer, AI Engineer, Flutter, React, Django, MEC Kochi, Govt. Model Engineering College">
+	<meta name="author" content="Steev James">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://steevjames.github.io/">
+	<meta property="og:title" content="Steev James | Project Lead at Oracle & Backend/AI Engineer">
+	<meta property="og:description" content="Portfolio of Steev James, Project Lead at Oracle. Backend systems, AI integrations, macOS productivity tools, and open-source contributions.">
+	<meta property="og:image" content="img/cover.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://steevjames.github.io/">
+	<meta property="twitter:title" content="Steev James | Project Lead at Oracle & Backend/AI Engineer">
+	<meta property="twitter:description" content="Portfolio of Steev James, Project Lead at Oracle. Backend systems, AI integrations, macOS productivity tools, and open-source contributions.">
+	<meta property="twitter:image" content="img/cover.jpg">
 </head>
 
 <body>
-	<div id="out" onclick="scrolltonav()">
-		<div id="main">
-			<div id="title">
-				<span style="white-space: nowrap;"><span class="red">S</span>teev &nbsp;<span
-						class="red">J</span>ames</span>
-				<br>
-				<span id="subtitle"> <span class="red rotate">-</span> Site no longer maintained.</span>
+	<!-- Interactive Canvas Background (Particles) -->
+	<canvas id="canvas-bg"></canvas>
+
+	<!-- Header / Navigation -->
+	<header id="navbar">
+		<a href="#" class="logo" id="nav-logo">Steev<span>.</span></a>
+		<div class="nav-right">
+			<nav class="navlinks" id="nav-menu">
+				<a href="#hero" class="active" id="link-hero">Home</a>
+				<a href="#about" id="link-about">About</a>
+				<a href="#projects" id="link-projects">Projects</a>
+				<a href="#articles" id="link-articles">Posts</a>
+				<a href="#connect" id="link-connect">Connect</a>
+				<a href="pages/donate/" target="_blank" id="link-donate">Donate</a>
+			</nav>
+			<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+				<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+				<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+			</button>
+			<button id="navbtn" aria-label="Toggle Navigation">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+			</button>
+		</div>
+	</header>
+
+	<!-- Mobile Menu Overlay -->
+	<div class="navlinks-mobile" id="nav-menu-mobile">
+		<button class="close-mobile-menu" id="close-mobile-btn" aria-label="Close Navigation">&times;</button>
+		<a href="#hero" id="mobile-link-hero">Home</a>
+		<a href="#about" id="mobile-link-about">About</a>
+		<a href="#projects" id="mobile-link-projects">Projects</a>
+		<a href="#articles" id="mobile-link-articles">Posts</a>
+		<a href="#connect" id="mobile-link-connect">Connect</a>
+		<a href="pages/donate/" target="_blank" id="mobile-link-donate">Donate</a>
+	</div>
+
+	<!-- Hero Section -->
+	<section id="hero">
+		<div class="hero-glow"></div>
+		
+		<div class="hero-inner">
+			<div class="hero-content" style="flex: 1; text-align: left; max-width: 650px;">
+				<h1 class="hero-title reveal reveal-delay-1" style="font-size: 64px; line-height: 1.1;">
+					<span style="font-size: 20px; font-weight: 500; font-family: var(--font-mono); color: var(--accent-indigo); display: block; margin-bottom: 12px; letter-spacing: 1px;">Hi, I'm</span>
+					<span class="hero-name-gradient">Steev James</span>.
+				</h1>
+				<p class="hero-description reveal reveal-delay-2" style="font-size: 20px; max-width: 580px; margin-top: 24px; margin-bottom: 20px;">
+					I build software for the fun of it and to solve real-world problems. I specialize in backend development, AI agents, and seamless integrations.
+				</p>
+				<div class="hero-typing reveal reveal-delay-2" id="typing-text" style="font-size: 18px; margin-bottom: 40px;"></div>
+				
+				<div class="hero-ctas reveal reveal-delay-3" style="display: flex; gap: 16px;">
+					<a href="#projects" class="btn btn-primary" id="cta-projects">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+						Explore
+					</a>
+					<a href="#articles" class="btn btn-secondary" id="cta-articles">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+						Posts
+					</a>
+					<a href="https://www.linkedin.com/in/steevjames/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="cta-linkedin" style="gap: 8px;">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+						LinkedIn
+					</a>
+				</div>
+			</div>
+			
+			<div class="hero-visual reveal reveal-delay-3" style="flex: 1; display: flex; justify-content: center; position: relative; width: 100%; max-width: 380px;">
+				<div style="width: 100%; aspect-ratio: 1/1; position: relative;">
+					<div style="position: absolute; inset: 0; background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-cyan) 100%); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; opacity: 0.15; filter: blur(20px); animation: liquidShape 8s ease-in-out infinite alternate;"></div>
+					<div style="position: absolute; inset: 20px; border: 2px solid var(--border-hover); border-radius: 50%; opacity: 0.5; animation: spin 20s linear infinite;"></div>
+					<div style="position: absolute; inset: 60px; border: 2px dashed var(--accent-cyan); border-radius: 50%; opacity: 0.3; animation: spin 15s linear infinite reverse;"></div>
+					<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; background: var(--bg-card); backdrop-filter: var(--glass-blur); border-radius: 20px; display: flex; align-items: center; justify-content: center; border: var(--glass-border); box-shadow: var(--glass-shadow); animation: floatCode 4s ease-in-out infinite;">
+						<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-indigo)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero-scroll-hint reveal reveal-delay-4">
+			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+		</div>
+	</section>
+
+	<!-- About & Timeline Section -->
+	<section id="about">
+		<h2 class="section-title reveal">About Me</h2>
+		
+		<div class="about-box reveal reveal-delay-1">
+			<div class="about-header-block">
+				<img src="img/me.jpg" alt="Steev James circular avatar" class="about-avatar" id="avatar-img">
+				<div class="about-intro">
+					<h3>Steev James</h3>
+					<p>Software Engineer - Backend, AI</p>
+				</div>
+			</div>
+			
+			<div class="about-description">
+				<p style="margin-bottom: 15px;">
+					I am a passionate Backend & AI Engineer specializing in developing high-performance server-side architectures, creating AI agents, integrations, and writing modular open-source code.
+				</p>
+				<p>
+					I love solving complex engineering challenges and designing scalable data systems.
+				</p>
+			</div>
+
+			<h3 class="timeline-title">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-indigo);"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+				Professional Timeline
+			</h3>
+			
+			<div class="timeline">
+				<!-- Timeline Item 1: Oracle Corporation -->
+				<div class="timeline-item">
+					<div class="timeline-marker"></div>
+					<span class="timeline-company" style="font-size: 18px; font-weight: 700; color: var(--accent-indigo); display: block; margin-bottom: 8px;">Oracle Corporation</span>
+					<p class="timeline-desc" style="margin-bottom: 16px;">
+						Full stack developer working on a wide range of projects across various teams, building scalable enterprise software, optimizing database query executions, and creating and integrating AI agents.
+					</p>
+					
+					<div style="display: flex; flex-direction: column; gap: 8px;">
+						<!-- Role 1 -->
+						<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px;">
+							<h4 class="timeline-role" style="margin-bottom: 2px;">Project Lead</h4>
+							<span class="timeline-time" style="font-size: 12px; margin-bottom: 0;">Oct 2025 - Present</span>
+						</div>
+						<!-- Role 2 -->
+						<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; border-top: 1px dashed var(--border-color); padding-top: 8px;">
+							<h4 class="timeline-role" style="margin-bottom: 2px;">Senior Software Engineer</h4>
+							<span class="timeline-time" style="font-size: 12px; margin-bottom: 0;">Aug 2023 - Oct 2025</span>
+						</div>
+						<!-- Role 3 -->
+						<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; border-top: 1px dashed var(--border-color); padding-top: 8px;">
+							<h4 class="timeline-role" style="margin-bottom: 2px;">Software Engineer</h4>
+							<span class="timeline-time" style="font-size: 12px; margin-bottom: 0;">Aug 2021 - Aug 2023</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Timeline Item 2: MEC -->
+				<div class="timeline-item">
+					<div class="timeline-marker"></div>
+					<span class="timeline-time">2017 - 2021 (Graduated)</span>
+					<h4 class="timeline-role">B.Tech in Computer Science</h4>
+					<span class="timeline-company">Govt. Model Engineering College (MEC), Kochi</span>
+					<p class="timeline-desc">Acquired strong foundations in algorithms, system designs, backend engineering, and mobile development.</p>
+				</div>
+
+				<!-- Timeline Item 3: Carmel HSS -->
+				<div class="timeline-item">
+					<div class="timeline-marker"></div>
+					<span class="timeline-time">High School</span>
+					<h4 class="timeline-role">Higher Secondary Education</h4>
+					<span class="timeline-company">Carmel HSS, Chalakudy</span>
+					<p class="timeline-desc">Specialized in Computer Science.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects Section -->
+	<section id="projects">
+		<h2 class="section-title reveal">Projects</h2>
+
+		<div class="projects-grid" id="projects-container"></div>
+	</section>
+
+	<!-- Articles Section -->
+	<section id="articles">
+		<h2 class="section-title reveal">Posts</h2>
+		<p class="reveal reveal-delay-1" style="color: var(--text-secondary); font-size: 16px; margin-bottom: 32px; margin-top: -20px; max-width: 600px;">
+			Deep dives into backend architecture, AI engineering, and developer tooling. Click to preview, or open the full article to share.
+		</p>
+		<div class="articles-grid" id="articles-container">
+			<!-- Populated dynamically by script.js -->
+		</div>
+	</section>
+
+	<!-- Connect Section -->
+	<section id="connect">
+		<h2 class="section-title reveal">Connect With Me</h2>
+		<p class="reveal reveal-delay-1" style="color: var(--text-secondary); font-size: 16px; margin-bottom: 30px;">
+			Feel free to check out my professional credentials, open-source work, or reach out to me directly.
+		</p>
+		
+		<div class="social-grid">
+			
+			<a href="https://www.linkedin.com/in/steevjames/" target="_blank" rel="noopener noreferrer" class="social-card linkedin reveal reveal-delay-1" id="social-linkedin">
+				<img src="icons/linkedin.png" alt="LinkedIn icon">
+				<span>LinkedIn</span>
+			</a>
+
+			<a href="https://github.com/steevjames" target="_blank" rel="noopener noreferrer" class="social-card github reveal reveal-delay-2" id="social-github">
+				<img src="icons/github.png" alt="GitHub icon">
+				<span>GitHub</span>
+			</a>
+
+			<a href="https://play.google.com/store/apps/dev?id=7649130837259097103" target="_blank" rel="noopener noreferrer" class="social-card playstore reveal reveal-delay-3" id="social-playstore">
+				<img src="icons/gplay.png" alt="Google Play icon">
+				<span>Play Store</span>
+			</a>
+
+			<a href="https://stackoverflow.com/users/7866757/steev-james" target="_blank" rel="noopener noreferrer" class="social-card stackoverflow reveal reveal-delay-4" id="social-stackoverflow">
+				<img src="icons/stack.png" alt="Stack Overflow icon">
+				<span>Stack Overflow</span>
+			</a>
+
+			<a href="https://www.instagram.com/steev_james/" target="_blank" rel="noopener noreferrer" class="social-card instagram reveal reveal-delay-1" id="social-instagram">
+				<img src="icons/insta.png" alt="Instagram icon">
+				<span>Instagram</span>
+			</a>
+
+			<a href="https://www.youtube.com/channel/UCwonSo8pkphElsU85S800Zw" target="_blank" rel="noopener noreferrer" class="social-card youtube reveal reveal-delay-2" id="social-youtube">
+				<img src="icons/youtube.png" alt="YouTube icon">
+				<span>YouTube</span>
+			</a>
+
+			<a href="https://www.facebook.com/steev.james" target="_blank" rel="noopener noreferrer" class="social-card facebook reveal reveal-delay-3" id="social-facebook">
+				<img src="icons/fb.png" alt="Facebook icon">
+				<span>Facebook</span>
+			</a>
+
+		</div>
+	</section>
+
+	<!-- Article Modal Reader -->
+	<div class="article-modal" id="article-modal">
+		<div class="modal-backdrop" id="modal-backdrop-close"></div>
+		<div class="modal-container">
+			<button class="modal-close" id="modal-close-btn" aria-label="Close Article">&times;</button>
+			<div class="modal-content" id="modal-article-body">
+				<!-- Processed markdown content loaded here -->
 			</div>
 		</div>
 	</div>
 
-	<div id="navbar">
-		<div class="navleft">Welcome</div>
-		<div class="navright" id="navtoggle">
-			<div id="navcontainer">
-				<a href="https://github.com/steevjames/steevjames.github.io" target="_blank">
-					<div class="navlink">
-						<!-- Empty Nav Option - Replace it -->
-					</div>
-				</a>
-				<a href="pages/donate/" target="_blank">
-					<div class="navlink">Donate </div>
-				</a>
-				<a href="https://github.com/steevjames" target="_blank">
-					<div class="navlink">Github </div>
-				</a>
-				<a href="https://www.facebook.com/steeventertainment/" target="_blank">
-					<div class="navlink">FB Page </div>
-				</a>
-			</div>
-			<div id="oldnav">X</div>
-		</div>
-		<div id="navbtn"><img src="img/nav.png" style="width:20px;"></div>
-	</div>
-
-	<div id="parallax">
-		<img src="img/me.jpg" id="image">
-	</div>
-	<div id="about">
-		<div class="brief">
-			<i>Site under development</i>
-		</div>
-
-		<div id="cardcontainer">
-			<div class="cards" style="background-color:#ccc;"> Studying at Govt. Model Engineering College</div>
-			<div class="cards" style="background-color:#ddd;"> Studied at Carmel HSS Chalakudy</div>
-			<div class="cards" style="background-color:#eee;float:none;margin-left:auto;margin-right:auto;clear:both;">
-				Studied at
-				CMI Public School</div>
-		</div>
-
-	</div>
-
-	<div class="featured">
-		<div class="heading">
-			Featured Links</div>
-		<div class="featuredflex">
-
-			<div class="wrk">
-				<a href="pages/donate/">
-					<img src="img/coin.png" class="wrkicon"> DONATE<br>
-					<div class="wrktext">If you feel like any part of my projects are useful to you, You can donate at
-						this link.</div>
-				</a>
-			</div>
-
-			<div class="wrk">
-				<a href="https://pub.dev/packages/stories_for_flutter" target="_blank">
-					<img src="featuredicons/flutter.webp" class="wrkicon">Stories for Flutter<br>
-					<div class="wrktext"> A customisable Flutter plugin that can be used to implement
-						Instagram/WhatsApp/Snapchat like stories in a flutter app.
-					</div>
-				</a>
-			</div>
-
-			<div class="wrk">
-				<a href="https://xpensemonitor.netlify.app/" target="_blank">
-					<img src="featuredicons/xpensetracker.png" class="wrkicon">Expense Tracker<br>
-					<div class="wrktext">A web app created in react, used to keep track, view and manage expenses</div>
-				</a>
-			</div>
-
-			<div class="wrk">
-				<a href="https://play.google.com/store/apps/details?id=com.steevjames" target="_blank">
-					<img src="featuredicons/ty.png" class="wrkicon" /><br />THE TYPING GAME<br>
-					<div class="wrktext">The Typing Game is an android
-						game that tests how fast you can type.</div>
-				</a>
-			</div>
-
-			<div class="wrk">
-				<a href="pages/imageToCSS/">
-					<img src="featuredicons/imgtocss.png" class="wrkicon">Image to CSS<br>
-					<div class="wrktext">Convert image to CSS (For whatever reason :))</div>
-				</a>
-			</div>
-
-			<div class="wrk">
-				<a href="https://play.google.com/store/apps/details?id=com.mec.attendance" target="_blank">
-					<img src="featuredicons/mecatt.png" class="wrkicon">MEC Attendance<br>
-					<div class="wrktext">An app that simplifies checking attendance for the students of Govt. Model
-						Engineering College.</div>
-				</a>
-			</div>
-
-			<div class="wrk">
-				<a href="https://form.jotform.me/93091728059464" target="_blank">
-					<img src="featuredicons/contact.png" class="wrkicon">Contact Me<br>
-					<div class="wrktext">Send me a suggestion/message.
-					</div>
-				</a>
-			</div>
-
-			<!-- <div class="wrk">
-				<a href="http://steevjames.blogspot.com/" target="_blank">
-					<img src="img/l.png" class="wrkicon">Official Blog<br>
-					<div class="wrktext">This is My Official Blog Where I often post
-						images.
-					</div>
-				</a>
-			</div> -->
-
-			<div class="wrk">
-				<a href="https://play.google.com/store/apps/details?id=com.steevjames.tinge" target="_blank">
-					<img src="featuredicons/ti.png" class="wrkicon">TINGE<br>
-					<div class="wrktext">Try to identify Colors from a few given
-						colors using its RGB value.</div>
-				</a>
-			</div>
-
-			<!-- <div class="wrk">
-				<a href="http://hoopweb.com" target="_blank">
-					<img src="featuredicons/ho.png" class="wrkicon">Hoop Web<br><div class="wrktext"> A website with content spanning accross a wide range of topics. </div>
-				</a>
-			</div> -->
-
-			<!-- <div class="wrk">
-				<a href="https://play.google.com/store/apps/details?id=com.steevjames.amelioratecelerity" target="_blank">
-					<img src="featuredicons/sw.png" class="wrkicon">SWIFT STREAK<br><div class="wrktext">This is all about how Swiftly you
-						can keep up the streak !</div>
-				</a>
-			</div> -->
-
-			<!-- <div class="wrk">
-				<a href="https://www.facebook.com/steeventertainment/" target="_blank">
-					<img src="featuredicons/steeventertainment.png" class="wrkicon">Steev Entertainment<br>
-					<div class="wrktext">A Facebook
-						page with Large number of followers.</div>
-				</a>
-			</div> -->
-
-			<div class="wrk">
-				<a href="http://noteclip.herokuapp.com/" target="_blank">
-					<img src="featuredicons/not.png" class="wrkicon">NoteClip<br>
-					<div class="wrktext">Website made in Django
-						that is used to store notes online.</div>
-				</a>
-			</div>
-
-			<div class="wrk">
-				<a href="https://drive.google.com/open?id=1Jx7Fft6rnOzi--PAco_yFZGmSTwwvU8X" target="_blank">
-					<img src="featuredicons/vir.png" class="wrkicon">Virus<br>
-					<div class="wrktext">Courageous ? Run this on your windows PC. Works best if theres no Antivirus.
-						Its not harmful & its made by me, so feel free to try</div>
-				</a>
-			</div>
-
-		</div>
-	</div>
-
-	<div id="social">
-		<p class="heading"><a onclick="openFullscreen()">Social Media Profiles</a></p>
-
-		<div id="profiles">
-
-			<div class="profile">
-				<a href="https://www.facebook.com/steev.james">
-					<div>
-						<img src="icons/fb.png" style="width:100%;">Facebook
-					</div>
-				</a>
-			</div>
-
-			<div class="profile">
-				<a href="https://play.google.com/store/apps/dev?id=7649130837259097103">
-					<div>
-						<img src="icons/gplay.png" style="width:100%;">Play Store
-					</div>
-				</a>
-			</div>
-
-			<div class="profile">
-				<a href="https://github.com/steevjames">
-					<div>
-						<img src="icons/github.png" style="width:100%;" />Github
-					</div>
-				</a>
-			</div>
-
-			<!-- <div class="profile">
-				<a href="https://twitter.com/_St33v">
-					<div>
-						<img src="icons/twitter.png" style="width:100%;" />Twitter
-					</div>
-				</a>
-			</div> -->
-
-			<div class="profile">
-				<a href="https://www.instagram.com/steev_james/">
-					<div>
-						<img src="icons/insta.png" style="width:100%;" />Instagram
-					</div>
-				</a>
-			</div>
-
-			<div class="profile">
-				<a href="https://www.youtube.com/channel/UCwonSo8pkphElsU85S800Zw">
-					<div>
-						<img src="icons/youtube.png" style="width:100%;" />Youtube
-					</div>
-				</a>
-			</div>
-
-			<div class="profile">
-				<a href="https://www.linkedin.com/in/steev-james-960273ba/">
-					<div>
-						<img src="icons/linkedin.png" style="width:100%;">LinkedIn
-					</div>
-				</a>
-			</div>
-
-			<div class="profile">
-				<a href="https://stackoverflow.com/users/7866757/steev-james">
-					<div>
-						<img src="icons/stack.png" style="width:100%;" />Stack Overflow
-					</div>
-				</a>
-			</div>
-
-			<div class="profile"></div>
-		</div>
-	</div>
+	<!-- Footer -->
 	<footer id="footer">
-		<div id="footerleft">Everything is Awesome !</div>
-		<div id="footerright">Designed by Steev James</div>
-		<br>
-		<div style="padding:20px;clear:both;font-size:18px;">CopyLeft 2020</div>
+		<div class="footer-content">
+			<div class="footer-left">
+				Stay curious. Keep building.
+			</div>
+			<div class="footer-right">
+				Made with <span>&hearts;</span> & Code
+			</div>
+		</div>
+		<div class="footer-copyleft">
+			CopyLeft 2026
+		</div>
 	</footer>
 
-
-	<!-- <script
-		type="text/javascript">(function (t, e) { var r = function (t) { try { var r = e.head || e.getElementsByTagName("head")[0]; a = e.createElement("script"); a.setAttribute("type", "text/javascript"); a.setAttribute("src", t); r.appendChild(a); } catch (t) { } }; t.CollectId = "5b69eaab56ef755dda03f6c4"; r("https://collectcdn.com/launcher.js"); })(window, document);</script>
-	-->
-	<script type="text/javascript" src="script.js"> </script>
-
+	<!-- Scripts -->
+	<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+	<script src="script.js"></script>
 </body>
-
 
 </html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "zummary-linkedin",
+    "title": "Zummary - LinkedIn Post",
+    "date": "May 10, 2026",
+    "embed": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:share:7454378677490069504?collapsed=1\" height=\"563\" width=\"504\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>"
+  },
+  {
+    "id": "sales-briefing-ui-agent",
+    "title": "Scaling Briefing UI Agent",
+    "date": "March 3, 2026",
+    "embed": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:share:7425960763430838272?collapsed=1\" height=\"563\" width=\"504\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>"
+  },
+  {
+    "id": "vibefusion-chrome-extension",
+    "title": "VibeFusion - Chrome Extension",
+    "date": "September 15, 2025",
+    "embed": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Built a Chrome extension to redesign websites:<br>🎉 VibeFusion - an AI-powered Chrome extension that transforms any webpage into a visual masterpiece with a single click!<br><br>👉Give it a try: <a href=\"https://t.co/0VWgTHy8VZ\">https://t.co/0VWgTHy8VZ</a></p>&mdash; Steev James (@_XteeV) <a href=\"https://x.com/_XteeV/status/1967577654711980458?ref_src=twsrc%5Etfw\">September 15, 2025</a></blockquote><script async src=\"https://platform.x.com/widgets.js\" charset=\"utf-8\"></script>"
+  }, {
+    "id": "scaling-microservices",
+    "title": "Scaling Backend Microservices: Best Practices",
+    "description": "An in-depth look at architecture designs, horizontal scaling, caching strategies, and common bottlenecks in backend services.",
+    "date": "July 24, 2025",
+    "file": "articles/scaling-microservices.md"
+  }
+]

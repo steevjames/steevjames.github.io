@@ -1,83 +1,111 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="icon" href="../../img/l.png" type="image/gif">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Donate | Steev James The Official Site</title>
-	<link rel="stylesheet" href="donate.css">
+	<title>Donate — Steev James</title>
+	
+	<!-- Favicon -->
+	<link rel="icon" href="../../img/l.png" type="image/gif">
+	
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="../../css.css">
 
-	<meta name="description"
-		content="This is the official website of Steev James. Donations can be made to Steev via this page.">
-	<meta name="keywords" content="Steev James - Donate, Steev James The Official Site - Donate">
-	<meta name="author" content="Steev James" />
-
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Support Steev James' open-source projects and content creation.">
+	<meta name="author" content="Steev James">
 </head>
 
 <body>
+	<!-- Interactive Canvas Background (Particles) -->
+	<canvas id="canvas-bg"></canvas>
 
-
-	<div id="navbar">
-		<span style="white-space: nowrap;"><span class="red">S</span>teev &nbsp;<span class="red">J</span>ames
-			<span style="font-size:70%;"><span class="red rotate">-</span> The Official Site</span></span>
-	</div>
-
-	<div class="intro">
-		<div style="text-align: center;"><img src="../../img/coin.png" class="coin"></div>
-		Thank You for considering to donate to us. Currently there are 2 payment methods supported. They are UPI and
-		Paypal.
-		<br><br>Any donation, even though small are highly appreciated.
-	</div>
-
-
-	<div class="main">
-		<div class="heading">
-			Payment Methods
+	<!-- Top Navigation -->
+	<nav class="article-page-nav" id="navbar">
+		<a href="../../index.html" class="article-page-back" id="back-link">
+			<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="19" y1="12" x2="5" y2="12"></line>
+				<polyline points="12 19 5 12 12 5"></polyline>
+			</svg>
+			Back to Portfolio
+		</a>
+		<div style="display: flex; align-items: center; gap: 16px;">
+			<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+				<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+				<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+			</button>
+			<a href="../../index.html" class="logo">Steev<span>.</span></a>
 		</div>
-		<div class="pcontainer">
-			<div class="pmode">
-				<!-- <a href="https://upi.link/s/SteevJames"> -->
-					<div>
-						<img src="../../img/upi.png" class="pimage"><br><br>
-						Indian users can pay through this method. All UPI apps (Google Pay, PhonePe, BHIM UPI) can be
-						used. <br><br>UPI address: <b
-							class="red">steev.james11@oksbi</b>.
-					</div>
-				<!-- </a> -->
-			</div>
+	</nav>
 
-			<div class="pmode" style="margin-left:2%;">
-				<a href="http://paypal.me/steevjames">
-					<div>
-						<img src="../../img/paypal.jpg" class="pimage"><br>
-						PayPal is the faster, safer way to send money, make an online payment, receive money or set up a
-						merchant account.
-					</div>
-				</a>
-			</div>
-
+	<!-- Main Content Container -->
+	<main class="article-page-container" style="max-width: 800px; padding-top: 120px;">
+		<!-- Meta Header -->
+		<div class="article-page-meta" style="text-align: center; margin-bottom: 40px;">
+			<span class="meta-date" style="font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-indigo); font-family: var(--font-mono); font-weight: 600;">Support My Work</span>
+			<h1 style="font-size: 40px; margin-top: 10px; margin-bottom: 15px; font-weight: 800; letter-spacing: -1px; color: var(--text-primary);">Thank You for Donating</h1>
+			<p class="meta-desc" style="max-width: 600px; margin: 0 auto; font-size: 16px; color: var(--text-secondary); line-height: 1.7;">
+				Any contribution helps support my open-source software, documentation, and development of tools.
+			</p>
 		</div>
 
-	</div>
+		<!-- Payment Options Panel -->
+		<div class="article-page-content" style="padding: 40px;">
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+				
+				<!-- Option 1: UPI -->
+				<div class="project-card" style="min-height: auto; padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center; background: var(--bg-card); border: var(--glass-border); border-radius: 16px;">
+					<img src="../../img/upi.png" alt="UPI logo" style="height: 40px; margin-bottom: 20px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));">
+					<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">UPI Apps</h3>
+					<p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+						For users in India. Scan or send via any UPI application (GPay, PhonePe, Paytm, BHIM).
+					</p>
+					<div style="font-family: var(--font-mono); font-size: 13px; padding: 8px 16px; background: var(--accent-glow-indigo); border-radius: 8px; border: 1px dashed rgba(16, 185, 129, 0.3); color: var(--accent-indigo); width: 100%; word-break: break-all; margin-top: auto;">
+						steev.james11@oksbi
+					</div>
+				</div>
 
-	<div class="intro" style="text-align: center;">
-		Thanks for Donating 😇.
-		<br>
-		<a href="../../"><input type="button" class="backbutton" value="Main Page" /></a>
-	</div>
+				<!-- Option 2: PayPal -->
+				<div class="project-card" style="min-height: auto; padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center; background: var(--bg-card); border: var(--glass-border); border-radius: 16px;">
+					<img src="../../img/paypal.jpg" alt="PayPal logo" style="height: 40px; margin-bottom: 20px; object-fit: contain; border-radius: 6px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));">
+					<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">PayPal</h3>
+					<p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+						Fast, secure international payments. Send funds via credit/debit card or PayPal balance.
+					</p>
+					<a href="http://paypal.me/steevjames" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: auto; padding: 10px 20px;">
+						Donate with PayPal
+					</a>
+				</div>
 
+			</div>
+		</div>
 
+		<div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+			<a href="../../index.html" class="btn btn-secondary" style="gap: 8px;">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+				Back to Main Portfolio
+			</a>
+		</div>
+	</main>
+
+	<!-- Footer -->
 	<footer id="footer">
-		<div id="footerleft">Keep Cool</div>
-		<div id="footerright">Thanks For Visiting</div>
-		<br>
-		<div style="padding:10px; padding-top:20px; clear:both;font-size:15px;">CopyLeft 2019</div>
+		<div class="footer-content">
+			<div class="footer-left">
+				Stay curious. Keep building.
+			</div>
+			<div class="footer-right">
+				Made with <span>&hearts;</span> & Code
+			</div>
+		</div>
+		<div class="footer-copyleft">
+			CopyLeft 2026
+		</div>
 	</footer>
 
-
+	<!-- Scripts -->
+	<script src="../../script.js"></script>
 </body>
-
 
 </html>

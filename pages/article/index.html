@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Theme Initialization (Prevent flash of unstyled theme) -->
+	<script>
+		(function() {
+			const savedTheme = localStorage.getItem('theme') || 'light';
+			document.documentElement.setAttribute('data-theme', savedTheme);
+		})();
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Post — Steev James</title>
+	
+	<!-- Favicon -->
+	<link rel="icon" href="../../img/l.png" type="image/gif">
+	
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="../../css.css">
+
+	<!-- Marked Markdown Parser -->
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+	<!-- SEO defaults (updated dynamically by JS) -->
+	<meta name="description" content="Post by Steev James, Project Lead at Oracle.">
+	<meta name="author" content="Steev James">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Steev James">
+	<meta property="og:title" content="Post — Steev James" id="og-title">
+	<meta property="og:description" content="Post by Steev James." id="og-desc">
+	<meta property="og:image" content="../../img/cover.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="Post — Steev James" id="tw-title">
+	<meta property="twitter:description" content="Post by Steev James." id="tw-desc">
+	<meta property="twitter:image" content="../../img/cover.jpg">
+</head>
+
+<body>
+	<!-- Interactive Canvas Background (Particles) -->
+	<canvas id="canvas-bg"></canvas>
+
+	<!-- Top Navigation -->
+	<nav class="article-page-nav" id="navbar">
+		<a href="../../index.html" class="article-page-back" id="back-link">
+			<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="19" y1="12" x2="5" y2="12"></line>
+				<polyline points="12 19 5 12 12 5"></polyline>
+			</svg>
+			Back to Portfolio
+		</a>
+		<div style="display: flex; align-items: center; gap: 16px;">
+			<button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+				<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+				<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+			</button>
+			<a href="../../index.html" class="logo">Steev<span>.</span></a>
+		</div>
+	</nav>
+
+	<!-- Article Content -->
+	<main class="article-page-container">
+		<!-- Meta section (populated by JS) -->
+		<div class="article-page-meta" id="article-meta">
+			<div class="article-page-loading" id="article-loading">
+				<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-indigo)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;">
+					<circle cx="12" cy="12" r="10" stroke-dasharray="30 30"></circle>
+				</svg>
+				<span>Loading post...</span>
+			</div>
+		</div>
+
+		<!-- Rendered markdown body -->
+		<div class="article-page-content" id="article-body" style="display: none;">
+			<div class="markdown-body" id="article-markdown"></div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="footer-content">
+			<div class="footer-left">
+				Stay curious. Keep building.
+			</div>
+			<div class="footer-right">
+				Made with <span>&hearts;</span> & Code
+			</div>
+		</div>
+		<div class="footer-copyleft">
+			CopyLeft 2026
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+	<script src="../../script.js"></script>
+	<script src="article-page.js"></script>
+</body>
+
+</html>
