@@ -95,7 +95,7 @@
 				<div class="hero-typing reveal reveal-delay-2" id="typing-text" style="font-size: 18px; margin-bottom: 40px;"></div>
 				
 				<div class="hero-ctas reveal reveal-delay-3" style="display: flex; gap: 16px;">
-					<a href="#projects" class="btn btn-primary" id="cta-projects">
+					<a href="#projects" class="btn btn-explore" id="cta-projects">
 						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
 						Explore
 					</a>
@@ -110,13 +110,38 @@
 				</div>
 			</div>
 			
-			<div class="hero-visual reveal reveal-delay-3" style="flex: 1; display: flex; justify-content: center; position: relative; width: 100%; max-width: 380px;">
-				<div style="width: 100%; aspect-ratio: 1/1; position: relative;">
-					<div style="position: absolute; inset: 0; background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-cyan) 100%); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; opacity: 0.15; filter: blur(20px); animation: liquidShape 8s ease-in-out infinite alternate;"></div>
-					<div style="position: absolute; inset: 20px; border: 2px solid var(--border-hover); border-radius: 50%; opacity: 0.5; animation: spin 20s linear infinite;"></div>
-					<div style="position: absolute; inset: 60px; border: 2px dashed var(--accent-cyan); border-radius: 50%; opacity: 0.3; animation: spin 15s linear infinite reverse;"></div>
-					<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; background: var(--bg-card); backdrop-filter: var(--glass-blur); border-radius: 20px; display: flex; align-items: center; justify-content: center; border: var(--glass-border); box-shadow: var(--glass-shadow); animation: floatCode 4s ease-in-out infinite;">
-						<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-indigo)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+			<div class="hero-visual reveal reveal-delay-3">
+				<div class="mascot-container">
+					<div class="mascot-glow"></div>
+					
+					<!-- Orbiting Emojis -->
+					<div class="orbiting-item item-rocket">🚀</div>
+					<div class="orbiting-item item-coffee">☕</div>
+					<div class="orbiting-item item-gamepad">🎮</div>
+					<div class="orbiting-item item-brain">🧠</div>
+					<div class="orbiting-item item-music">🎵</div>
+
+					<!-- Cute Mascot (Glassmorphic Robot) -->
+					<div class="robot-mascot">
+						<div class="robot-antenna">
+							<span class="antenna-mast"></span>
+							<span class="antenna-bulb"></span>
+						</div>
+						<div class="robot-ears">
+							<span class="ear left"></span>
+							<span class="ear right"></span>
+						</div>
+						<div class="robot-face">
+							<div class="robot-eyes">
+								<span class="eye left"><span class="pupil"></span></span>
+								<span class="eye right"><span class="pupil"></span></span>
+							</div>
+							<div class="robot-cheeks">
+								<span class="cheek left"></span>
+								<span class="cheek right"></span>
+							</div>
+							<div class="robot-mouth"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -158,7 +183,7 @@
 				<!-- Timeline Item 1: Oracle Corporation -->
 				<div class="timeline-item">
 					<div class="timeline-marker"></div>
-					<span class="timeline-company" style="font-size: 18px; font-weight: 700; color: var(--accent-indigo); display: block; margin-bottom: 8px;">Oracle Corporation</span>
+					<span class="timeline-company" style="font-size: 18px; font-weight: 700; display: inline-block; margin-bottom: 8px;">Oracle Corporation</span>
 					<p class="timeline-desc" style="margin-bottom: 16px;">
 						Full stack developer working on a wide range of projects across various teams, building scalable enterprise software, optimizing database query executions, and creating and integrating AI agents.
 					</p>

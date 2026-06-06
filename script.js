@@ -66,10 +66,10 @@
     // 2. Typing/Cycling Subtitle Effect
     // ==========================================
     const words = [
-        "Project Lead at Oracle",
-        "Backend & AI Engineer",
-        "Open Source Contributor",
-        "Productivity Tool Builder"
+        "Works On My Machine",
+        "Code. Break. Fix.",
+        "Turning Ideas Alive",
+        "Open Source..."
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -448,5 +448,26 @@
                 document.body.style.overflow = '';
             });
         });
+    }
+
+    // ==========================================
+    // 8. Logo Visibility Observer
+    // ==========================================
+    const heroName = document.querySelector('.hero-name-gradient');
+    const navLogo = document.getElementById('nav-logo');
+    if (heroName && navLogo) {
+        const logoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+                    navLogo.classList.add('logo-visible');
+                } else {
+                    navLogo.classList.remove('logo-visible');
+                }
+            });
+        }, {
+            threshold: 0,
+            rootMargin: '0px 0px 0px 0px'
+        });
+        logoObserver.observe(heroName);
     }
 })();
