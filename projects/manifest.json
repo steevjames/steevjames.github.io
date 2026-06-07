@@ -145,6 +145,20 @@
     "tags": ["Flutter", "Dart", "Timetable Engine"]
   },
   {
+    "title": "Excel 2020 App",
+    "description": "The official app of Excel 2020-2021, the techno-managerial fest of Govt. Model Engineering College",
+    "category": "web-mobile",
+    "icon": "<img src=\"featuredicons/excel2020.png\" class=\"project-icon\" alt=\"Excel 2020 App logo\">",
+    "links": [
+      {
+        "url": "https://github.com/Excel-MEC/Excel-App-2020/tree/master",
+        "title": "View Source",
+        "icon": "github"
+      }
+    ],
+    "tags": ["Flutter", "Dart", "Firebase"]
+  },
+  {
     "title": "MEC-Drive",
     "description": "A carpooling application developed to promote shared travel and reduce commuting costs for students and staff at MEC Kochi.",
     "category": "web-mobile",
@@ -171,5 +185,19 @@
       }
     ],
     "tags": ["Django", "Python", "PostgreSQL"]
+  },
+  {
+    "title": "Tinge",
+    "description": "A game where users guess the color represented by the RGB notation from a given number of colors.",
+    "category": "utility",
+    "icon": "<img src=\"featuredicons/tinge.png\" class=\"project-icon\" alt=\"Tinge logo\">",
+    "links": [
+      {
+        "url": "https://github.com/steevjames/Tinge/tree/master",
+        "title": "View Source",
+        "icon": "github"
+      }
+    ],
+    "tags": ["Cordova", "HTML5 Game", "JavaScript"]
   }
 ]
